@@ -1,4 +1,4 @@
-import { DataTypes, Model, Sequelize, ForeignKey, INTEGER } from 'sequelize';
+import { DataTypes, Model, Sequelize } from 'sequelize';
 
 export class userModel extends Model {
 
@@ -23,7 +23,7 @@ export class userModel extends Model {
         }, {
             sequelize: instacia,
             modelName: 'userModel',
-            tableName: 'user',
+            tableName: 'users',
             timestamps: false
         })
     }

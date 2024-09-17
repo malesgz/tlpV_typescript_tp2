@@ -1,4 +1,4 @@
-import { Model, DataTypes, Sequelize, ForeignKey } from "sequelize";
+import { Model, DataTypes, Sequelize } from "sequelize";
 
 export class equipmentModel extends Model {
     declare mark: string;
@@ -6,10 +6,6 @@ export class equipmentModel extends Model {
     declare state: string;
     declare ubication: string;
     declare adquisition_date: string;
-    // declare propietary: string;
-
-    // declare category_id: ForeignKey<number>;
-    // declare user_id: ForeignKey<number>;
 
     static initModel(instancia: Sequelize) {
         equipmentModel.init({
@@ -34,10 +30,6 @@ export class equipmentModel extends Model {
                 allowNull: false,
                 defaultValue: DataTypes.NOW
             },
-            // propietary: {
-            //     type: DataTypes.STRING,
-            //     allowNull: false
-            // },
         }, {
             sequelize: instancia,
             modelName: 'equipmentModel',
